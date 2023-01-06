@@ -1,4 +1,4 @@
-/*#include <iostream>
+#include <iostream>
 #include "Roslina.h"
 
 class WilczeJagody : public Roslina {
@@ -9,4 +9,4 @@ public:
 	void rysowanie() {
 		std::cout << "J";
 	}
-};*/
+};
