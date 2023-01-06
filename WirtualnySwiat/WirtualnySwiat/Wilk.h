@@ -8,7 +8,6 @@ private:
 	const int initiative = 5;
 public:
 	Wilk(int pos_X, int pos_Y);
-	void akcja();
 	void kolizja();
 	void rysowanie() {
 		std::cout << "W";

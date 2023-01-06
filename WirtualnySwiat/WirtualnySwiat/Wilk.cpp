@@ -7,10 +7,6 @@ Wilk::Wilk(int pos_X, int pos_Y)
 	this->pos_Y = pos_Y;
 }
 
-void Wilk::akcja()
-{
-}
-
 void Wilk::kolizja()
 {
 }

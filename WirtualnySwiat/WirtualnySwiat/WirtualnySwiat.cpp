@@ -21,7 +21,14 @@ int main()
     Zmija zmija(18, 12);
     Owca owca(19, 0);
 
-    cout<<trawa.get_Pos_X()<<"\t"<<trawa.get_Pos_Y();
+    cout <<"Pozycja: " << wilk.get_Pos_X() << "\t" << wilk.get_Pos_Y() << endl;
+    wilk.akcja();
+    cout << "Pozycja: " << wilk.get_Pos_X() << "\t" << wilk.get_Pos_Y() << endl;
+    wilk.akcja();
+    cout << "Pozycja: " << wilk.get_Pos_X() << "\t" << wilk.get_Pos_Y() << endl;
+    wilk.akcja();
+    cout << "Pozycja: " << wilk.get_Pos_X() << "\t" << wilk.get_Pos_Y() << endl;
+    /*cout << trawa.get_Pos_X() << "\t" << trawa.get_Pos_Y();
     cout << endl << trawa.get_Strength()<<endl;
     trawa.rysowanie();
 
@@ -31,5 +38,5 @@ int main()
 
     cout << endl << guarana.get_Pos_X() << "\t" << guarana.get_Pos_Y();
     cout << endl << guarana.get_Strength() << endl;
-    guarana.rysowanie();
+    guarana.rysowanie();*/
 }
