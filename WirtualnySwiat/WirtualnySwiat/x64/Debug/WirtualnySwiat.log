@@ -1,0 +1,14 @@
+﻿  Guarana.cpp
+  WirtualnySwiat.cpp
+C:\Users\Mareczek\source\repos\WirtualnySwiat\WirtualnySwiat\Organizm.h(3,15): error C2011: 'Organizm': 'class' type redefinition
+C:\Users\Mareczek\source\repos\WirtualnySwiat\WirtualnySwiat\Organizm.h(3): message : see declaration of 'Organizm'
+C:\Users\Mareczek\source\repos\WirtualnySwiat\WirtualnySwiat\Roslina.h(4,15): error C2011: 'Roslina': 'class' type redefinition
+C:\Users\Mareczek\source\repos\WirtualnySwiat\WirtualnySwiat\Roslina.h(4): message : see declaration of 'Roslina'
+C:\Users\Mareczek\source\repos\WirtualnySwiat\WirtualnySwiat\Guarana.h(4,32): error C2504: 'Roslina': base class undefined
+C:\Users\Mareczek\source\repos\WirtualnySwiat\WirtualnySwiat\WirtualnySwiat.cpp(13,17): error C2039: 'get_Pos_X': is not a member of 'Trawa'
+C:\Users\Mareczek\source\repos\WirtualnySwiat\WirtualnySwiat\Trawa.h(4): message : see declaration of 'Trawa'
+C:\Users\Mareczek\source\repos\WirtualnySwiat\WirtualnySwiat\WirtualnySwiat.cpp(13,42): error C2039: 'get_Pos_Y': is not a member of 'Trawa'
+C:\Users\Mareczek\source\repos\WirtualnySwiat\WirtualnySwiat\Trawa.h(4): message : see declaration of 'Trawa'
+C:\Users\Mareczek\source\repos\WirtualnySwiat\WirtualnySwiat\WirtualnySwiat.cpp(14,27): error C2039: 'get_Strength': is not a member of 'Trawa'
+C:\Users\Mareczek\source\repos\WirtualnySwiat\WirtualnySwiat\Trawa.h(4): message : see declaration of 'Trawa'
+  Generating Code...
