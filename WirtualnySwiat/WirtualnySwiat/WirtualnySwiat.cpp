@@ -28,7 +28,8 @@ int main()
     Mysz mysz_j(3, 2);*/
     Mysz mysz_g(1, 1);
     Zmija zmija(1, 1);
-    Wilk wilk(1, 1);
+    Wilk wilk(5, 5);
+    Wilk wilk2(7, 8);
     /*Organizm* organizmy[2];
     organizmy[0] = new Mysz(1, 1);
     organizmy[1] = new Zmija(2, 2);
@@ -42,6 +43,8 @@ int main()
     //Mysz mysz(1, 1);
     swiat.organizmy[1][1] = &mysz_g;
     zmija.kolizja(&swiat, mysz_g);
+    swiat.organizmy[5][5] = &wilk;
+    swiat.organizmy[7][8] = &wilk2;
     //cout << zmija.get_Pos_X();
     //Wilk wilk(5, 5);
     //Zmija zmija(4, 4);

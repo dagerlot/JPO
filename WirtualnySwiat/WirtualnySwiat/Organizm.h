@@ -7,6 +7,8 @@ protected:
 	int strength, initiative, pos_X, pos_Y, live;
 
 public:
+	bool operator > (Organizm& a);
+
 	virtual int get_Strength() {
 		return this->strength;
 	};
@@ -14,7 +16,7 @@ public:
 		this->strength = strength;
 	}
 	
-	int get_Initiative() {
+	virtual int get_Initiative() {
 		return this->initiative;
 	};
 

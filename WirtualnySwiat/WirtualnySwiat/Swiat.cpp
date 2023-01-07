@@ -3,6 +3,7 @@
 #include "Swiat.h"
 #include "Wilk.h"
 #include <vector>
+#include <algorithm>
 
 Swiat Swiat::swiat(Organizm* organizmy[20][20])
 {
@@ -16,6 +17,34 @@ Swiat Swiat::swiat(Organizm* organizmy[20][20])
 
 void Swiat::wykonajTure(Swiat* swiat)
 {
+	std::vector<Organizm*> lista;
+	Organizm* organizm;
+	for (int i = 0; i < 20; i++) {
+		for (int j = 0; j < 20; j++) {
+			if (this->organizmy[i][j] != nullptr) {
+				organizm = (this->organizmy[i][j]);
+				lista.push_back(organizm);
+			}
+		}
+	}
+	
+	for (int i = 0; i < lista.size(); i++) {
+		for (int j = 0; j < lista.size()-i-1; j++) {
+			if (lista[j]->get_Initiative() < lista[j+1]->get_Initiative()) {
+				organizm = lista[j+1];
+				lista[j+1] = lista[j];
+				lista[j] = organizm;
+			}
+			if (lista[j]->get_Initiative() == lista[j + 1]->get_Initiative()) {
+				if (lista[j]->get_Live() < lista[j + 1]->get_Live()) {
+					organizm = lista[j + 1];
+					lista[j + 1] = lista[j];
+					lista[j] = organizm;
+				}
+			}
+		}
+	}
+
 	for (int i = 0; i < 20; i++) {
 		for (int j = 0; j < 20; j++) {
 			if (this->organizmy[i][j] != nullptr) {
@@ -54,7 +83,7 @@ Swiat Swiat::rysujMape()
 		}
 	}
 
-	for (auto i = lista.begin(); i != lista.end(); ++i) {
+	for (auto i = lista.begin(); i != lista.end(); i++) {
 		x = (*i)->get_Pos_X();
 		y = (*i)->get_Pos_Y();
 		this->organizmy[x][y] = (*i);
