@@ -8,7 +8,6 @@ private:
 	const int initiative = 4;
 public:
 	Owca(int pos_X, int pos_Y);
-	void akcja();
 	void kolizja();
 	void rysowanie() {
 		std::cout << "O";

@@ -9,11 +9,12 @@
 #include "Owca.h"
 #include "Swiat.h"
 #include "Organizm.h"
+#include <vector>
  
 using namespace std;
 int main()
 {
-    Trawa trawa(5, 4);
+    /*Trawa trawa(5, 4);
     WilczeJagody wilczeJagody(3, 2);
     Guarana guarana(2, 1);
 
@@ -24,12 +25,31 @@ int main()
     Owca owca(19, 0);
 
     Mysz mysz_t(5, 4);
-    Mysz mysz_j(3, 2);
-    Mysz mysz_g(2, 1);
+    Mysz mysz_j(3, 2);*/
+    Mysz mysz_g(1, 1);
+    Zmija zmija(1, 1);
+    Wilk wilk(1, 1);
+    /*Organizm* organizmy[2];
+    organizmy[0] = new Mysz(1, 1);
+    organizmy[1] = new Zmija(2, 2);
 
+    for (int i = 0; i < 2; i++)
+    {
+        (*organizmy[i]).rysowanie();
+    }*/
     Swiat swiat;
-    
-    swiat.organizmy[5][4] = &trawa;
+    //Zmija zmija(1, 1);
+    //Mysz mysz(1, 1);
+    swiat.organizmy[1][1] = &mysz_g;
+    zmija.kolizja(&swiat, mysz_g);
+    //cout << zmija.get_Pos_X();
+    //Wilk wilk(5, 5);
+    //Zmija zmija(4, 4);
+    swiat.wykonajTure(&swiat);
+    // TODO ulozenie swiata
+    swiat = swiat.rysujMape(); // tu trzeba podaæ listê
+    swiat.rysujSwiat();
+    /*swiat.organizmy[5][4] = &trawa;
     swiat.organizmy[3][2] = &wilczeJagody;
     swiat.organizmy[2][1] = &guarana;
     cout << &mysz_t;
@@ -45,7 +65,7 @@ int main()
     swiat.organizmy[3][2]->rysowanie();
     cout << endl;
     swiat.organizmy[2][1]->rysowanie();
-    cout << endl;
+    cout << endl;*/
 
     /*swiat.organizmy[5][4] = &trawa;
 

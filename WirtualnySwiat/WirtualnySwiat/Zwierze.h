@@ -6,6 +6,6 @@
 
 class Zwierze :public Organizm {
 public:
-	void akcja();
-	void kolizja(Swiat* swiat, Organizm* przeciwnik);
+	void akcja(Swiat* swiat);
+	void kolizja(Swiat* swiat, Organizm& przeciwnik);
 };
