@@ -9,6 +9,9 @@ public:
 	int get_Strength() {
 		return this->strength;
 	};
+	void set_Strength(int strength) {
+		this->strength = strength;
+	}
 	
 	int get_Initiative() {
 		return this->initiative;
@@ -27,8 +30,7 @@ public:
 	void set_Pos_Y(int pos_Y) {
 		this->pos_Y = pos_Y;
 	};
-
-	virtual void akcja() = 0;
-	virtual void kolizja() = 0;
-	virtual void rysowanie() = 0;
+	void akcja() {};
+	void kolizja() {};
+	void rysowanie() {};
 };

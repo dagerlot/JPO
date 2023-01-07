@@ -7,6 +7,8 @@
 #include "Pingwin.h"
 #include "Zmija.h"
 #include "Owca.h"
+#include "Swiat.h"
+#include "Organizm.h"
  
 using namespace std;
 int main()
@@ -21,13 +23,44 @@ int main()
     Zmija zmija(18, 12);
     Owca owca(19, 0);
 
-    cout <<"Pozycja: " << wilk.get_Pos_X() << "\t" << wilk.get_Pos_Y() << endl;
+    Mysz mysz_t(5, 4);
+    Mysz mysz_j(3, 2);
+    Mysz mysz_g(2, 1);
+
+    Swiat swiat;
+    
+    swiat.organizmy[5][4] = &trawa;
+    swiat.organizmy[3][2] = &wilczeJagody;
+    swiat.organizmy[2][1] = &guarana;
+    cout << &mysz_t;
+    trawa.kolizja(&swiat, mysz_t);
+    wilczeJagody.kolizja(&swiat, &mysz_j);
+    guarana.kolizja(&swiat, &mysz_g);
+
+    (*swiat.organizmy[5][4]).rysowanie();
+    swiat.organizmy[5][4]->rysowanie();
+    cout << &mysz_t;
+    mysz_t.rysowanie();
+    cout << endl;
+    swiat.organizmy[3][2]->rysowanie();
+    cout << endl;
+    swiat.organizmy[2][1]->rysowanie();
+    cout << endl;
+
+    /*swiat.organizmy[5][4] = &trawa;
+
+    trawa.kolizja(&swiat, 0);
+    cout << trawa.get_Pos_X();
+    cout << swiat.organizmy[5][4];*/
+    // wilk.kolizja(&swiat, &mysz);
+
+    /*cout << "Pozycja: " << wilk.get_Pos_X() << "\t" << wilk.get_Pos_Y() << endl;
     wilk.akcja();
     cout << "Pozycja: " << wilk.get_Pos_X() << "\t" << wilk.get_Pos_Y() << endl;
     wilk.akcja();
     cout << "Pozycja: " << wilk.get_Pos_X() << "\t" << wilk.get_Pos_Y() << endl;
     wilk.akcja();
-    cout << "Pozycja: " << wilk.get_Pos_X() << "\t" << wilk.get_Pos_Y() << endl;
+    cout << "Pozycja: " << wilk.get_Pos_X() << "\t" << wilk.get_Pos_Y() << endl;*/
     /*cout << trawa.get_Pos_X() << "\t" << trawa.get_Pos_Y();
     cout << endl << trawa.get_Strength()<<endl;
     trawa.rysowanie();

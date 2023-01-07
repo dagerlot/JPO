@@ -1,9 +1,2 @@
-﻿  Mysz.cpp
-  Owca.cpp
-  Pingwin.cpp
-  Wilk.cpp
-  WirtualnySwiat.cpp
-  Zmija.cpp
-  Generating Code...
-  LINK : C:\Users\Mareczek\Desktop\JPO-main\WirtualnySwiat\x64\Debug\WirtualnySwiat.exe not found or not built by the last incremental link; performing full link
+﻿  WirtualnySwiat.cpp
   WirtualnySwiat.vcxproj -> C:\Users\Mareczek\Desktop\JPO-main\WirtualnySwiat\x64\Debug\WirtualnySwiat.exe
